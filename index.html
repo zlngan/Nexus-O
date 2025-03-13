@@ -1,1 +1,296 @@
-<h1>Welcom to Nexus-O!</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="Nexus-O: An Omni-Perceptive And -Interactive Model for Language, Audio, And Vision">
+    <meta name="keywords" content="text-to-image generation, Large Language Models, scene synthesis">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MMFinBench</title> 
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PYVRSFMDRL');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+    <link rel="icon" href="./static/images/logo.png">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <link rel="stylesheet" href="./static/css/index-gradio.css">
+    <link rel="stylesheet" href="./static/css/live_theme.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <!-- <script src="./static/js/index.js"></script> -->
+</head>
+<body>
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title"
+                        style="display: flex;flex-direction: row;align-items: center;justify-content: center;margin-bottom: 5px;"><img
+                            src="./static/images/logo.png" width="60" height="60" style="margin-right: 10px;">
+                            Nexus-O:</h1>
+                    <h1 class="title is-2 publication-title">An Omni-Perceptive And -Interactive Model for Language, Audio, And Vision</h1>
+                    <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Che Liu<sup>1,2*</sup> </a>,</span>
+                        <span class="author-block">
+              Yingji Zhang<sup>3*</sup></a>, Dong Zhang<sup>1*</sup>, Weijie Zhang<sup>1*</sup>,  Chenggong Gong<sup>1*</sup>, Haohan Li<sup>1*</sup>, 
+              Yu Lu<sup>1*</sup></a>, 
+            </span>
+            <br>
+            <span class="author-block">
+                Shilin Zhou<sup>1,6</sup>, Yue Lu<sup>1</sup>, Ziliang Gan<sup>1</sup>, Ziao Wang<sup>7</sup>, Junwei Liao<sup>8</sup>, Haipang Wu<sup>1</sup>, Ji Liu<sup>1</sup>, Andr&eacute Freitas<sup>3,10</sup>, Zenglin Xu<sup>5</sup>, Rongjunchen Zhang<sup>1,4,&#x2660</sup>, Yong Dai<sup>1,5,&#x2660,&#8224</sup>
+            </span>
+                    </div>
+                    <div class="is-size-5 publication-authors" style="margin-top: 10px;">
+                        <span class="author-block">
+                            <sup>1</sup>Hithink Research, <sup>2</sup>Imperical College London, <sup>3</sup>University of Manchester, <sup>4</sup>Zhejiang University, <sup>5</sup>Fudan University, <sup>6</sup>Soochow University, <sup>7</sup>Baptist University, <sup>8</sup>Microsoft, <sup>9</sup>Meta AI, <sup>10</sup>Idiap Research Institute
+                        </span>
+                    </div>
+
+    </div>
+</section>
+
+<div class="column has-text-centered">
+    <div class="publication-links">
+      <!-- PDF Link. -->
+      <span class="link-block"> <a href="https://arxiv.org/abs/2503.01879"
+           class="external-link button is-normal is-rounded is-dark"> <span class="icon"> <i class="ai ai-arxiv"></i> </span> <span>arXiv</span> </a> </span>
+      <!-- Code Link. -->
+      <!-- <span class="link-block"> <a href="https://github.com/HiThink-Research/MME-Finance.git"
+           class="external-link button is-normal is-rounded is-dark"> <span class="icon"> <i class="fab fa-github"></i> </span> <span>Code</span> </a> </span> -->
+      <!-- HuggingFace Link. -->
+      <!-- <span class="link-block"> <a href="https://huggingface.co/datasets/hithink-ai/MME-Finance"
+           class="external-link button is-normal is-rounded is-dark"><span class="icon">🤗</span><span>Space</span> </a></span> -->
+    </div>
+      </div>
+
+
+      <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <h2 class="title is-2">Demo</h2>
+                <br>
+            </div>
+            <div class="columns is-centered">
+                <div class="column is-full-width">
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom: 20px;">
+                        <!-- 确保视频元素有 controls 属性并添加 controlsList 属性确保控制器可用 -->
+                        <video id="demo-video" controls controlsList="nodownload" preload="metadata" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source src="./static/videos/en.mp4" type="video/mp4">
+                            您的浏览器不支持视频标签。
+                        </video>
+                    </div>
+                    <div class="video-controls" style="display: flex; justify-content: space-between; margin-bottom: 30px;">
+                        <!-- 音量控制滑块 -->
+                        <div class="volume-control" style="display: flex; align-items: center;">
+                            <span class="icon" style="margin-right: 5px;">
+                                <i class="fas fa-volume-up"></i>
+                            </span>
+                            <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1" style="width: 100px;">
+                        </div>
+                        
+                        <!-- 全屏按钮 -->
+                        <button id="fullscreen-btn" class="button is-small is-link">
+                            <span class="icon">
+                                <i class="fas fa-expand"></i>
+                            </span>
+                            <span>Full Screen</span>
+                        </button>
+                        
+                        <!-- 下载按钮 -->
+                        <a href="./static/videos/en.mp4" download class="button is-small is-success">
+                            <span class="icon">
+                                <i class="fas fa-download"></i>
+                            </span>
+                            <span>Download</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const video = document.getElementById('demo-video');
+            const fullscreenBtn = document.getElementById('fullscreen-btn');
+            const volumeSlider = document.getElementById('volume-slider');
+            
+            // 音量控制
+            volumeSlider.addEventListener('input', function() {
+                video.volume = this.value;
+                
+                // 根据音量值更改图标
+                const volumeIcon = this.previousElementSibling.querySelector('i');
+                if (this.value == 0) {
+                    volumeIcon.className = 'fas fa-volume-mute';
+                } else if (this.value < 0.5) {
+                    volumeIcon.className = 'fas fa-volume-down';
+                } else {
+                    volumeIcon.className = 'fas fa-volume-up';
+                }
+            });
+            
+            // 全屏功能
+            fullscreenBtn.addEventListener('click', function() {
+                if (!document.fullscreenElement) {
+                    // 使用正确的全屏 API
+                    if (video.requestFullscreen) {
+                        video.requestFullscreen().catch(err => {
+                            console.error(`全屏请求错误: ${err.message} (${err.name})`);
+                        });
+                    } else if (video.webkitRequestFullscreen) { /* Safari */
+                        video.webkitRequestFullscreen();
+                    } else if (video.msRequestFullscreen) { /* IE11 */
+                        video.msRequestFullscreen();
+                    }
+                } else {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.webkitExitFullscreen) { /* Safari */
+                        document.webkitExitFullscreen();
+                    } else if (document.msExitFullscreen) { /* IE11 */
+                        document.msExitFullscreen();
+                    }
+                }
+            });
+        });
+    </script>
+
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <h2 class="title is-2">Overview</h2>
+            <br>
+        </div>
+        <!-- Architecture -->
+        <img class="columns is-centered has-text-centered" src="./static/images/radar.png" alt="Teaser" width="95%"
+        style="margin:0 auto">
+        <p> <b>Nexus-O</b>, which supports any combination of audio, image/video, and text inputs. Different from existing approaches
+            that treat audio as an auxiliary, our model enables a joint understanding of these modalities. <b>Nexus-O</b> is capable of handling a wide range of
+            tasks, demonstrating strong performance across various benchmarks. For <b>Nexus-O-audio</b> (EN) and
+            (CN), the scores are expressed as reciprocal (1/scores).</p>
+        <br>
+        <div class="columns is-centered">
+            <div class="column is-full-width">
+                <h4 class="title is-3">•Architecture of Nexus-O </h4>
+                <div class="content has-text-justified">
+                    <img class="columns is-centered has-text-centered" src="./static/images/architecture.png" alt="Teaser" width="95%" style="margin:0 auto">
+                    <br>
+                    <p>
+                        Architecture of Nexus-O, which is designed to accept any combination of input modalities
+and generates output in either the language or audio modality, where the Auto-Regressive (AR) audio
+decoder takes a special start token embedding and the last language embedding as input to generate
+the hierarchical discrete audio codes in an auto-regressive manner. These codes are subsequently fed
+into a pretrained audio generator to produce the final audio output.
+                    </p>
+                    <figcaption>
+                    <p style="text-align: center; color: #1d3f9c;"></p>
+                    </figcaption>
+                </div>
+                <h4 class="title is-3">•Audio Dataset Synthesis Pipeline</h4>
+                <img class="columns is-centered has-text-centered" src="./static/images/dataset.png" alt="Teaser" width="95%" style="margin:0 auto">
+                <br>
+                <p>
+                        Audio dataset synthesis pipeline. In the current version, our testbed only supports the ASR
+task. We will further incorporate various audio-modal tasks, including the AQA and AVQA tasks.
+Both are currently under development.
+
+                    </p>
+                    <div class="content has-text-justified">
+                   
+                    </div>
+                <h4 class="title is-3">•Overview of Training Stage </h4>
+                <img class="columns is-centered has-text-centered" src="./static/images/train_stage.png" alt="Teaser" width="95%" style="margin:0 auto">
+                <br>    
+                <div class="content has-text-justified">
+                        <p>
+                            Overview of the training stage in Nexus-O. The first stage aims to map the speech features
+into semantic space, the second stage aims to enable the audio instruction-following capability, and
+the last stage aims to enable speech generation capability.
+                        </p>
+                    </div>
+            </div>
+        </div>
+
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <h2 class="title is-2">Experimental Results</h2>
+            <br>
+        </div>
+        <div class="columns is-centered">
+            <div class="column is-full-width"> 
+                <div class="content has-text-justified">
+                    <figcaption> 
+                        <p style="text-align: center; color: #061E61; font-size: 18px;"> Evaluation on Vision Understanding Benchmarks.
+                        </p>
+                    <img class="columns is-centered has-text-centered" src="./static/images/Vision_benchmark.png" alt="Teaser" width="95%" style="margin:0 auto">
+                    <br>
+                    <br>
+                    <figcaption> 
+                        <p style="text-align: center; color: #061E61; font-size: 18px;"> Evaluation on Audio English QA Benchmarks.
+                        </p>
+                    <img class="columns is-centered has-text-centered" src="./static/images/Audio_QA_Benchmark.png" alt="Teaser" width="95%" style="margin:0 auto">
+                    <br>
+                    <br>
+                    <figcaption> 
+                        <p style="text-align: center; color: #061E61; font-size: 18px;"> Evaluation on ASR Benchmarks.
+                        </p>
+                    <img class="columns is-centered has-text-centered" src="./static/images/ASR_Benchmark.png" alt="Teaser" width="95%" style="margin:0 auto">
+                    <br>
+                    <br>
+                    <figcaption> 
+                        <p style="text-align: center; color: #061E61; font-size: 18px;"> Evaluation on Speech-to-Text Translation Benchmarks.
+                        </p>
+                    <img class="columns is-centered has-text-centered" src="./static/images/S2T_translation_benchmark.png" alt="Teaser" width="80%" style="margin:0 auto">
+
+
+
+
+</section>
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-1 mathvista_other" id="citation">Citation</h1>
+  </div>
+</section>
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <pre><code>
+        @article{liu2025nexus,
+            title={Nexus-O: An Omni-Perceptive And-Interactive Model for Language, Audio, And Vision},
+            author={Liu, Che and Zhang, Yingji and Zhang, Dong and Zhang, Weijie and Gong, Chenggong and Li, Haohan and Lu, Yu and Zhou, Shilin and Lu, Yue and Gan, Ziliang and others},
+            journal={arXiv preprint arXiv:2503.01879},
+            year={2025}
+          }
+</code></pre>
+  </div>
+</section>
